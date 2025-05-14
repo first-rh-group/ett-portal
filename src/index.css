@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Garantir que o canvas não extrapole o contêiner */
+canvas {
+ display: block; /* Evitar comportamento inline */
+  max-width: 100%; /* Limitar o tamanho ao contêiner */
+  max-height: 100%; /* Limitar a altura ao contêiner */
+ /* pointer-events: none;  Impedir que o canvas bloqueie interações */
+}
